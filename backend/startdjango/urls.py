@@ -16,7 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.shortcuts import HttpResponse
+from book import views
 
+# 视图函数一般不会写到urls.py中，放在每一个app的views.py中
+# def index(request):
+#     return HttpResponse("Hello World")
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # urls.py中只写视图的映射，不能写具体访问的url，前面自带了http://127.0.0.1:8000/
+    # path('s', index) # 访问http://127.0.0.1:8000/s才能访问到index
+    # 这里访问的是http://127.0.0.1:8000/book?id=1。后面的id是参数，是视图自动带过来的，参数的值是自己输入的
+    path('book',views.book_detail_query_string), # 注意这里的book_detail_query_string是视图函数名，不能带(),否则变成函数执行的返回值了
+    # http://127.0.0.1:8000/book/1
+    # 1.以后在浏览器中，如果book_id输入的是一个非整数，那么会报404错误，比如输入http://127.0.0.1:8000/book/a
+    # 2.在视图函数中得到的book_id就是一个整数，如果输入http://127.0.0.1:8000/book/1，那么book_id就是整数1，而不是默认的字符串类型'1'
+    path('book/<int:book_id>',views.book_detail_path),
+    # path('book/<int:book_id>/<str:book_name>',views.book_detail_path)
 ]
