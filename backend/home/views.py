@@ -86,5 +86,3 @@ def book_demo_mix(request, user_id, user_name):
     return HttpResponse(
         f"用户id为：{user_id},用户名称为：{user_name},图书id为：{book_id},图书名称为：{book_name}"
     )
-
-print("这是我修改我自己电脑git用户名的测试代码")
