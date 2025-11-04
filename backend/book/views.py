@@ -14,8 +14,25 @@ def book_detail_query_string(request):
     name = request.GET.get("name")
     return HttpResponse(f"图书id是：{book_id}，图书名称是：{name}")
 
+
 # 在path中携带参数
 def book_detail_path(request, book_id):
     return HttpResponse(f"图书id是：{book_id}")
+
+
 # def book_detail_path(request, book_id,book_name):
 #     return HttpResponse(f"图书id是：{book_id}，图书名称是：{book_name}")
+
+def book_str(request, book_id):
+    return HttpResponse(f"图书id是：{book_id}")
+
+
+def book_slug(request, book_id):
+    return HttpResponse(f"图书id是：{book_id}")
+
+
+def book_uuid(request, book_id):
+    return HttpResponse(f"图书id是：{book_id}")
+
+def book_path(request, book_id):
+    return HttpResponse(f"图书id是：{book_id}")
