@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>with标签</title>
+</head>
+<body>
+<div>
+    {% with  username=person.name %}
+        <p>用户名为：{{ username }}</p>
+    {% endwith %}
+</div>
+
+</body>
+</html>
