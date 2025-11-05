@@ -86,3 +86,13 @@ def book_demo_mix(request, user_id, user_name):
     return HttpResponse(
         f"用户id为：{user_id},用户名称为：{user_name},图书id为：{book_id},图书名称为：{book_name}"
     )
+
+
+def spaceless_demo(request):
+    return render(request, "space_less.html", context={})
+
+
+def autoescape_demo(request):
+    context = {"info": "<a href='https://www.baidu.com'>百度</a>"}
+    return render(request, "autoescape.html", context=context)
+
