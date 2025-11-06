@@ -82,6 +82,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "database_demo",
         "USER": "root",
+        # 公司和自己电脑的mysql密码不一样
         "PASSWORD": "293015",
         # 数据库地址,开发阶段使用,生产环境使用阿里云数据库
         "HOST": "127.0.0.1",
