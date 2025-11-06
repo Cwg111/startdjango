@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "tags",
     "filters",
+    "book",
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,12 @@ WSGI_APPLICATION = "startdjango.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": "database_demo",
+        "USER": "root",
+        "PASSWORD": "293015",
+        # 数据库地址,开发阶段使用,生产环境使用阿里云数据库
+        "HOST": "127.0.0.1",
+        "PORT": "3306",
     }
 }
 
