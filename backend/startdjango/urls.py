@@ -55,4 +55,5 @@ urlpatterns = [
     path("tags/", include("tags.urls")),
     path("filters/", include("filters.urls")),
     path("book/", include("book.urls")),
+    path("article/", include("article.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "tags",
     "filters",
     "book",
+    "article",
 ]
 
 MIDDLEWARE = [
