@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "filters",
     "book",
     "article",
+    "front",
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ DATABASES = {
         "NAME": "database_demo",
         "USER": "root",
         # 公司和自己电脑的mysql密码不一样
-        "PASSWORD": "293015",
+        "PASSWORD": "123456",
         # 数据库地址,开发阶段使用,生产环境使用阿里云数据库
         "HOST": "127.0.0.1",
         "PORT": "3306",
@@ -116,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Shanghai"
 
 USE_I18N = True
 
@@ -127,7 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]
+# STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # media相关的配置,也就是上传的文件保存的路径
 MEDIA_ROOT = BASE_DIR / "media"
