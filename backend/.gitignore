@@ -1,0 +1,11 @@
+# 忽略Python编译文件
+*.pyc
+__pycache__/
+
+# 忽略Django迁移文件（如果不需要跟踪迁移记录，可选）
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# 忽略虚拟环境、日志等
+venv/
+logs/
