@@ -35,7 +35,3 @@ def q_view(request):
     for book in books:
         print(book.id,book.name,book.price,book.rating)
     return HttpResponse("q_view")
-
-
-
-

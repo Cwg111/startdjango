@@ -10,3 +10,7 @@ venv/
 frontend/node_modules/
 # 前端打包文件
 frontend/dist/
+startdjango/__pycache__/__init__.cpython-310.pyc
+startdjango/__pycache__/settings.cpython-310.pyc
+startdjango/__pycache__/urls.cpython-310.pyc
+startdjango/__pycache__/wsgi.cpython-310.pyc
